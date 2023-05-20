@@ -54,10 +54,6 @@ class Root(tk.Tk):
         self.salir_button = tk.Button(
             self, command=self.salir, text='Salir', font=('Lucida', 12, 'bold'))
         self.salir_button.place(x=380, y=520)
-        msg = MIMEMultipart()
-        msg['Subject'] = str(self.asunto_entry.get())
-        msg['From'] = str(self.de_entry.get())
-        msg['To'] = ', '.join(self.para_entry.get())
 
     def salir(self):
         self.destroy()
